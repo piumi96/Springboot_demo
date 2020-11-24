@@ -1,11 +1,14 @@
 package com.example.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.sun.istack.internal.NotNull;
 
+import javax.validation.constraints.NotEmpty;
 import java.util.UUID;
 
 public class Person {
     private final UUID id;
+    @NotEmpty
     private final String name;
 
     public Person(@JsonProperty("id") UUID id,
